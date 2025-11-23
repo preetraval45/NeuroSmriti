@@ -1,0 +1,23 @@
+# Build Stage for Next.js
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Copy application code
+COPY . .
+
+# Set build-time environment variables
+ARG NEXT_PUBLIC_API_URL=http://localhost:3102
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
+# Build the Next.js application
+RUN npm run build
+
+# Keep container running to share volume
+CMD ["tail", "-f", "/dev/null"]
