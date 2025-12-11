@@ -18,7 +18,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm mb-8 backdrop-blur-sm">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              Trusted by 10,000+ families worldwide
+              Research-backed AI for Cognitive Care
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -56,20 +56,20 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-bold text-cyan-400">94%</div>
-                <div className="text-gray-400 text-sm mt-1">Detection Accuracy</div>
+                <div className="text-4xl font-bold text-cyan-400">AI</div>
+                <div className="text-gray-400 text-sm mt-1">Deep Learning Models</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-bold text-purple-400">6 yrs</div>
-                <div className="text-gray-400 text-sm mt-1">Earlier Detection</div>
+                <div className="text-4xl font-bold text-purple-400">Multi</div>
+                <div className="text-gray-400 text-sm mt-1">Modal Analysis</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-bold text-pink-400">50k+</div>
-                <div className="text-gray-400 text-sm mt-1">Lives Improved</div>
+                <div className="text-4xl font-bold text-pink-400">Early</div>
+                <div className="text-gray-400 text-sm mt-1">Detection Focus</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <div className="text-4xl font-bold text-green-400">24/7</div>
-                <div className="text-gray-400 text-sm mt-1">AI Monitoring</div>
+                <div className="text-gray-400 text-sm mt-1">AI Support</div>
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-500 mt-4">*Based on clinical validation with 50,000+ patient dataset</p>
+                  <p className="text-xs text-gray-500 mt-4">*Research prototype trained on synthetic clinical data</p>
                 </div>
               </div>
             </div>
@@ -408,8 +408,8 @@ export default function Home() {
                 </div>
                 <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl p-8 text-center">
                   <div className="text-6xl mb-4">🧓</div>
-                  <p className="text-xl font-semibold text-gray-700">&quot;NeuroSmriti helps me remember my grandchildren&apos;s names. That means everything to me.&quot;</p>
-                  <p className="text-gray-500 mt-4">- Margaret, 78, Early-stage Alzheimer&apos;s</p>
+                  <p className="text-xl font-semibold text-gray-700">&quot;AI-powered tools can help patients maintain independence and preserve precious memories for longer.&quot;</p>
+                  <p className="text-gray-500 mt-4">- Research Goal for Patient Care</p>
                 </div>
               </div>
             )}
@@ -447,8 +447,8 @@ export default function Home() {
                 </div>
                 <div className="bg-gradient-to-br from-green-100 to-cyan-100 rounded-3xl p-8 text-center">
                   <div className="text-6xl mb-4">💚</div>
-                  <p className="text-xl font-semibold text-gray-700">&quot;Caring for Mom was overwhelming until NeuroSmriti. Now I have the support I need.&quot;</p>
-                  <p className="text-gray-500 mt-4">- Sarah, daughter & caregiver</p>
+                  <p className="text-xl font-semibold text-gray-700">&quot;Advanced AI systems can provide caregivers with valuable insights and reduce the burden of care.&quot;</p>
+                  <p className="text-gray-500 mt-4">- Caregiver Support Research</p>
                 </div>
               </div>
             )}
@@ -486,11 +486,43 @@ export default function Home() {
                 </div>
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 text-center">
                   <div className="text-6xl mb-4">👨‍⚕️</div>
-                  <p className="text-xl font-semibold text-gray-700">&quot;NeuroSmriti has transformed how I diagnose and monitor my Alzheimer&apos;s patients.&quot;</p>
-                  <p className="text-gray-500 mt-4">- Dr. James Chen, Neurologist</p>
+                  <p className="text-xl font-semibold text-gray-700">&quot;AI-assisted diagnosis tools show promise in improving early detection and patient monitoring capabilities.&quot;</p>
+                  <p className="text-gray-500 mt-4">- Clinical AI Research</p>
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Important Disclaimer */}
+      <section className="py-16 bg-amber-50 border-t-4 border-amber-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-amber-900 mb-3">Important Medical Disclaimer</h3>
+                <div className="text-amber-900 space-y-2 leading-relaxed">
+                  <p>
+                    <strong>Research Prototype:</strong> NeuroSmriti is a research project and educational platform demonstrating AI applications in cognitive healthcare. This system is NOT FDA-approved and is NOT intended for clinical diagnosis or treatment decisions.
+                  </p>
+                  <p>
+                    <strong>Training Data:</strong> The AI models are currently trained on synthetic data generated from published clinical research parameters (ADNI, OASIS, NACC datasets). While based on real-world research, the models have not been validated with actual patient data.
+                  </p>
+                  <p>
+                    <strong>Medical Advice:</strong> Always consult qualified healthcare professionals for medical advice, diagnosis, or treatment. Do not rely on this platform for medical decisions. If you have concerns about cognitive health, contact your doctor immediately.
+                  </p>
+                  <p>
+                    <strong>Accuracy Claims:</strong> Any performance metrics displayed are from controlled research environments using synthetic data and do not reflect real-world clinical performance.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -499,28 +531,27 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Start Your Journey Today
+            Explore the Research Platform
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of families who are taking control of their cognitive health
-            with NeuroSmriti&apos;s AI-powered platform.
+            Experience how AI technology could potentially transform cognitive healthcare and support families affected by Alzheimer&apos;s disease.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/register"
+              href="/demo"
               className="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold text-lg hover:bg-purple-50 transition"
             >
-              Get Started Free
+              Try Demo
             </Link>
             <Link
-              href="/contact"
+              href="/about"
               className="px-8 py-4 bg-transparent border-2 border-white rounded-xl font-semibold text-lg hover:bg-white/10 transition"
             >
-              Talk to an Expert
+              Learn More
             </Link>
           </div>
           <p className="text-purple-200 mt-6 text-sm">
-            No credit card required. Free tier available forever.
+            Educational and research purposes only. Not for clinical use.
           </p>
         </div>
       </section>

@@ -17,7 +17,15 @@
       "Bash(docker-compose down:*)",
       "Bash(docker-compose restart:*)",
       "Bash(docker volume rm:*)",
-      "Bash(docker ps:*)"
+      "Bash(docker ps:*)",
+      "Bash(cd:*)",
+      "Bash(xargs ls:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker system prune:*)",
+      "Bash(npm run build:*)",
+      "Bash(findstr:*)",
+      "Bash(docker-compose exec:*)",
+      "Bash(move /y:*)"
     ],
     "deny": [],
     "ask": []

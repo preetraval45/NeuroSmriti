@@ -16,8 +16,8 @@ COPY . .
 ARG NEXT_PUBLIC_API_URL=http://localhost:3102
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
-# Build the Next.js application
+# Build the Next.js application (output: 'export' in next.config.js will create /app/out automatically)
 RUN npm run build
 
-# Keep container running to share volume
+# Keep container running so volume remains accessible
 CMD ["tail", "-f", "/dev/null"]
