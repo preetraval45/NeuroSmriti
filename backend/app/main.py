@@ -12,7 +12,11 @@ import time
 
 from app.core.config import settings
 from app.core.database import engine, Base
-from app.api.v1 import auth, patients, predictions, memories, interventions, cognitive_tests
+from app.api.v1 import (
+    auth, patients, predictions, memories, interventions, cognitive_tests,
+    ml_advanced, advanced_features, communication, safety,
+    clinical_support, research_data, social_gamification, integrations
+)
 
 # Create database tables
 # Base.metadata.create_all(bind=engine)
@@ -109,12 +113,33 @@ async def api_health_check():
 
 
 # Include API routers
-app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
-app.include_router(patients.router, prefix="/api/v1/patients", tags=["Patients"])
-app.include_router(predictions.router, prefix="/api/v1/predictions", tags=["AI Predictions"])
-app.include_router(memories.router, prefix="/api/v1/memories", tags=["Memory Graph"])
-app.include_router(interventions.router, prefix="/api/v1/interventions", tags=["Interventions"])
-app.include_router(cognitive_tests.router, prefix="/api/v1/cognitive-tests", tags=["Cognitive Tests"])
+API_V1_PREFIX = "/api/v1"
+
+# Core routers
+app.include_router(auth.router, prefix=f"{API_V1_PREFIX}/auth", tags=["Authentication"])
+app.include_router(patients.router, prefix=f"{API_V1_PREFIX}/patients", tags=["Patients"])
+app.include_router(predictions.router, prefix=f"{API_V1_PREFIX}/predictions", tags=["AI Predictions"])
+app.include_router(memories.router, prefix=f"{API_V1_PREFIX}/memories", tags=["Memory Graph"])
+app.include_router(interventions.router, prefix=f"{API_V1_PREFIX}/interventions", tags=["Interventions"])
+app.include_router(cognitive_tests.router, prefix=f"{API_V1_PREFIX}/cognitive-tests", tags=["Cognitive Tests"])
+
+# Advanced ML & AI routers
+app.include_router(ml_advanced.router, prefix=API_V1_PREFIX, tags=["Advanced ML"])
+app.include_router(advanced_features.router, prefix=API_V1_PREFIX, tags=["Advanced AI Features"])
+
+# Communication & Safety routers
+app.include_router(communication.router, prefix=API_V1_PREFIX, tags=["Communication"])
+app.include_router(safety.router, prefix=API_V1_PREFIX, tags=["Safety & Monitoring"])
+
+# Clinical Decision Support & Research routers
+app.include_router(clinical_support.router, prefix=API_V1_PREFIX, tags=["Clinical Decision Support"])
+app.include_router(research_data.router, prefix=API_V1_PREFIX, tags=["Research & Data"])
+
+# Social & Gamification routers
+app.include_router(social_gamification.router, prefix=API_V1_PREFIX, tags=["Social & Gamification"])
+
+# Integration routers
+app.include_router(integrations.router, prefix=API_V1_PREFIX, tags=["Integration & Automation"])
 
 
 # Startup event

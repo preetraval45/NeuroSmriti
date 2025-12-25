@@ -1,0 +1,288 @@
+/* Accessibility and Theme CSS */
+
+/* ==================== DARK MODE ==================== */
+.dark {
+  --color-bg: #1a1a1a;
+  --color-bg-secondary: #2d2d2d;
+  --color-text: #e5e5e5;
+  --color-text-secondary: #b3b3b3;
+  --color-border: #404040;
+  --color-card: #252525;
+}
+
+.dark body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.dark .bg-white {
+  background-color: var(--color-card) !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: var(--color-bg-secondary) !important;
+}
+
+.dark .text-gray-600 {
+  color: var(--color-text-secondary) !important;
+}
+
+.dark .border {
+  border-color: var(--color-border) !important;
+}
+
+/* ==================== TEXT SIZE ==================== */
+.text-normal {
+  --text-scale: 1;
+}
+
+.text-large {
+  --text-scale: 1.25;
+}
+
+.text-extra-large {
+  --text-scale: 1.5;
+}
+
+html {
+  font-size: calc(16px * var(--text-scale, 1));
+}
+
+.text-large h1,
+.text-extra-large h1 {
+  font-size: calc(2.25rem * var(--text-scale, 1));
+}
+
+.text-large h2,
+.text-extra-large h2 {
+  font-size: calc(1.875rem * var(--text-scale, 1));
+}
+
+.text-large button,
+.text-extra-large button {
+  font-size: calc(1rem * var(--text-scale, 1));
+  padding: calc(0.75rem * var(--text-scale, 1)) calc(1.5rem * var(--text-scale, 1));
+}
+
+/* ==================== CONTRAST MODE ==================== */
+.contrast-high {
+  --contrast-multiplier: 1.3;
+}
+
+.contrast-extra-high {
+  --contrast-multiplier: 1.6;
+}
+
+.contrast-high,
+.contrast-extra-high {
+  filter: contrast(var(--contrast-multiplier));
+}
+
+.contrast-high .text-gray-600,
+.contrast-extra-high .text-gray-600 {
+  color: #333 !important;
+}
+
+.contrast-high .bg-gray-100,
+.contrast-extra-high .bg-gray-100 {
+  background-color: #f9f9f9 !important;
+}
+
+/* ==================== COLORBLIND MODES ==================== */
+/* Protanopia (Red-blind) */
+.cb-protanopia {
+  --color-red: #00509e;
+  --color-green: #ffa500;
+  --color-blue: #0080ff;
+}
+
+.cb-protanopia .text-red-600 { color: #00509e !important; }
+.cb-protanopia .bg-red-600 { background-color: #00509e !important; }
+.cb-protanopia .text-green-600 { color: #ffa500 !important; }
+.cb-protanopia .bg-green-600 { background-color: #ffa500 !important; }
+
+/* Deuteranopia (Green-blind) */
+.cb-deuteranopia {
+  --color-red: #c83737;
+  --color-green: #e5a100;
+  --color-blue: #0080ff;
+}
+
+.cb-deuteranopia .text-red-600 { color: #c83737 !important; }
+.cb-deuteranopia .bg-red-600 { background-color: #c83737 !important; }
+.cb-deuteranopia .text-green-600 { color: #e5a100 !important; }
+.cb-deuteranopia .bg-green-600 { background-color: #e5a100 !important; }
+
+/* Tritanopia (Blue-blind) */
+.cb-tritanopia {
+  --color-red: #ff4d4d;
+  --color-green: #00b894;
+  --color-blue: #ff69b4;
+}
+
+.cb-tritanopia .text-blue-600 { color: #ff69b4 !important; }
+.cb-tritanopia .bg-blue-600 { background-color: #ff69b4 !important; }
+
+/* ==================== REDUCE MOTION ==================== */
+.reduce-motion,
+.reduce-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+.reduce-motion .animate-pulse,
+.reduce-motion .animate-spin {
+  animation: none !important;
+}
+
+/* ==================== COMPLEXITY LEVELS ==================== */
+/* Simplified Interface */
+.complexity-simplified .advanced-feature {
+  display: none !important;
+}
+
+.complexity-simplified button {
+  min-height: 3rem;
+  font-size: 1.125rem;
+}
+
+.complexity-simplified .card {
+  padding: 2rem !important;
+}
+
+/* Minimal Interface */
+.complexity-minimal .optional-content {
+  display: none !important;
+}
+
+.complexity-minimal button {
+  min-height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.complexity-minimal .navigation {
+  font-size: 1.25rem;
+}
+
+.complexity-minimal .card {
+  padding: 2.5rem !important;
+  margin-bottom: 2rem;
+}
+
+/* ==================== FOCUS INDICATORS ==================== */
+*:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.dark *:focus-visible {
+  outline-color: #818cf8;
+}
+
+.contrast-high *:focus-visible,
+.contrast-extra-high *:focus-visible {
+  outline-width: 4px;
+  outline-offset: 3px;
+}
+
+/* ==================== TOUCH TARGETS ==================== */
+.text-large button,
+.text-extra-large button,
+.complexity-simplified button,
+.complexity-minimal button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ==================== READABILITY ==================== */
+.contrast-high p,
+.contrast-extra-high p {
+  line-height: 1.8;
+}
+
+.text-large p,
+.text-extra-large p {
+  line-height: 1.7;
+}
+
+/* ==================== CUSTOM COLORS ==================== */
+:root {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-background: #ffffff;
+}
+
+.dark {
+  --color-background: #1a1a1a;
+}
+
+/* Apply custom colors */
+.btn-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+/* ==================== SKIP LINKS ==================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==================== SCREEN READER ONLY ==================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ==================== RESPONSIVE ACCESSIBILITY ==================== */
+@media (max-width: 768px) {
+  .text-large,
+  .text-extra-large {
+    --text-scale: 1.15;
+  }
+
+  .complexity-simplified button,
+  .complexity-minimal button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

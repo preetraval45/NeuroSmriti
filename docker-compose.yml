@@ -55,7 +55,7 @@ services:
       DEBUG: "True"
     volumes:
       - ./backend:/app
-      - ./ml/models:/app/ml/models
+      - ./ml/models:/app/app/ml/models:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -78,7 +78,7 @@ services:
       CELERY_RESULT_BACKEND: redis://redis:6379/2
     volumes:
       - ./backend:/app
-      - ./ml/models:/app/ml/models
+      - ./ml/models:/app/app/ml/models:ro
     depends_on:
       - redis
       - postgres

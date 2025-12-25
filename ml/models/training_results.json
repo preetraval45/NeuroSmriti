@@ -1,0 +1,27 @@
+{
+  "Random Forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "training_time": 0.240597
+  },
+  "Gradient Boosting": {
+    "accuracy": 0.9995,
+    "precision": 0.9995016722408027,
+    "recall": 0.9995,
+    "f1_score": 0.9994998413932635,
+    "training_time": 14.446688
+  },
+  "Neural Network": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "training_time": 1.846913
+  },
+  "Ensemble": {
+    "accuracy": 1.0,
+    "f1_score": 1.0
+  }
+}

@@ -25,7 +25,14 @@
       "Bash(npm run build:*)",
       "Bash(findstr:*)",
       "Bash(docker-compose exec:*)",
-      "Bash(move /y:*)"
+      "Bash(move /y:*)",
+      "Bash(dir:*)",
+      "Bash(python scripts/generate_synthetic_data.py:*)",
+      "Bash(python generate_sample_data.py:*)",
+      "Bash(python train_and_test.py:*)",
+      "Bash(python train_models_fixed.py:*)",
+      "Bash(xcopy:*)",
+      "Bash(python -m json.tool:*)"
     ],
     "deny": [],
     "ask": []
