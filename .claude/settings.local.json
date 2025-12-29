@@ -32,7 +32,8 @@
       "Bash(python train_and_test.py:*)",
       "Bash(python train_models_fixed.py:*)",
       "Bash(xcopy:*)",
-      "Bash(python -m json.tool:*)"
+      "Bash(python -m json.tool:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
